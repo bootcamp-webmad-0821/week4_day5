@@ -1,0 +1,26 @@
+<div class="container">
+
+    <h1>Detalles de {{title}}</h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            Descripción
+            <br>
+            {{description}}
+        </div>
+        <div class="col-md-6">
+            Autor/a
+            <br>
+            {{#each author}}
+            <img src="{{pictureUrl}}" alt="{{name}}" style="width: 100%;">
+            {{name}} {{lastName}} ({{nationality}})
+            <hr>
+            {{/each}}
+        </div>
+    </div>
+
+    <hr>
+
+    <a href="/libros/editar?book_id={{id}}" class="btn btn-warning">Editar</a>
+    <a href="/libros" class="btn btn-dark">Volver</a>
+</div>
